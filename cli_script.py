@@ -27,13 +27,13 @@ def main():
     input_path = Path(args.input)
     output_path = Path(args.output)
 
-    print(f"\n[CLI] Cargando archivo: {input_path}")
+    print(f"\nCargando archivo: {input_path}")
     df_final, models = build_full_pipeline(input_path)
 
-    print(f"[CLI] Guardando resultado en: {output_path}")
+    print(f"Guardando resultado en: {output_path}")
     df_final.to_csv(output_path, index=False)
 
-    print("[CLI] Proceso completado exitosamente ✔")
+    print("Proceso completado exitosamente")
 
 if __name__ == "__main__":
     main()
